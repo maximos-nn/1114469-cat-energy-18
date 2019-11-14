@@ -1,0 +1,54 @@
+.catalog__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 60px;
+  color: #111111;
+}
+
+.catalog__item-title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.catalog__order {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #68b738;
+}
+
+.catalog__more-title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.catalog__more-note {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.catalog__show-all {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #444444;
+  background-color: $alternative-background;
+}

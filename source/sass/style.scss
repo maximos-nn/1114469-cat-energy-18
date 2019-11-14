@@ -1,55 +1,7 @@
+@import "font-face.scss";
 @import "variables.scss";
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("../fonts/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswaldregular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("../fonts/oswaldmedium.woff2") format("woff2"),
-    url("../fonts/oswaldmedium.woff") format("woff");
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-body {
-  margin: 0;
-
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-
-  color: #444444;
-  background-color: $main-background;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+@import "mixins.scss";
+@import "scaffolding.scss";
 @import "blocks/page-header.scss";
 @import "blocks/promo-categories.scss";
 @import "blocks/title-screen.scss";
@@ -58,3 +10,4 @@ a {
 @import "blocks/advantages.scss";
 @import "blocks/catalog.scss";
 @import "blocks/product-info.scss";
+@import "blocks/copyright.scss";

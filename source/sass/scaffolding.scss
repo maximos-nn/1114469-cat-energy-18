@@ -1,0 +1,31 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+
+  font-family: $base-font-stack;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  color: #444444;
+  background-color: $main-background;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

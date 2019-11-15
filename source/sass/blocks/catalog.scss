@@ -1,0 +1,34 @@
+.catalog__title {
+  @include font($size: 36px, $height: 60px);
+}
+
+.catalog__item-title {
+  @include font();
+  text-transform: uppercase;
+}
+
+.catalog__order {
+  @include font($color: #ffffff);
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #68b738;
+}
+
+.catalog__more-title {
+  @include font();
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.catalog__more-note {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.catalog__show-all {
+  @include font($color: #444444);
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $alternative-background;
+}

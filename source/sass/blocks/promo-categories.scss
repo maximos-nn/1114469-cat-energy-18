@@ -1,0 +1,14 @@
+.promo-categories__item {
+  background-color: $alternative-background;
+  width: 320px;
+}
+
+.promo-categories__title {
+  @include font($size: 24px, $height: 37px);
+  text-transform: uppercase;
+}
+
+.promo-categories__link {
+  @include font($height: 16px);
+  text-transform: uppercase;
+}

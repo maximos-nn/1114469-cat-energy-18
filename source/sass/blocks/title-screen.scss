@@ -1,0 +1,24 @@
+.title-screen {
+  min-height: 305px;
+  width: 320px;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.title-screen__title {
+  @include font($size: 36px, $height: 36px, $color: #ffffff);
+  text-align: center;
+}
+
+.title-screen__slogan {
+  @include font($size: 14px, $height: 14px, $color: #ffffff);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title-screen__link {
+  @include font($size: 14px, $height: 18px, $color: #ffffff);
+  text-align: center;
+  text-transform: uppercase;
+}

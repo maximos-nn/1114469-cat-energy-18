@@ -1,0 +1,40 @@
+.form__field {
+  @include font($height: 18px, $color: #222222);
+  text-transform: uppercase;
+
+  input {
+    @include font($height: 18px, $color: #444444);
+    text-transform: uppercase;
+  }
+}
+
+.form__radio {
+  @include font($height: 18px, $color: #222222);
+  text-transform: uppercase;
+}
+
+.form__title {
+  @include font($size: 24px, $height: 24px);
+}
+
+.form__comment {
+  @include font($height: 18px, $color: #444444);
+  text-transform: uppercase;
+}
+
+.form__check {
+  @include font($height: 18px, $color: #222222);
+  text-transform: uppercase;
+}
+
+.form__submit {
+  @include font($color: #ffffff);
+  text-transform: uppercase;
+  background-color: #68b738;
+  border: none;
+}
+
+.form__notice {
+  line-height: 16px;
+  text-align: center;
+}

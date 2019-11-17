@@ -1,0 +1,34 @@
+.cat-story__title {
+  @include font($size: 36px, $height: 60px);
+}
+
+.cat-story__story {
+  line-height: 18px;
+}
+
+.cat-story__progress {
+  text-align: center;
+}
+
+.cat-story__metric {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.cat-story__value {
+  @include font($size: 24px, $height: 24px);
+}
+
+.cat-story__spent {
+  @include font($size: 14px);
+  text-align: center;
+}
+
+.cat-story__controls {
+  button {
+    @include font();
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+  }
+}

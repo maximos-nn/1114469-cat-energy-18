@@ -1,0 +1,8 @@
+.program-form__title {
+  @include font($size: 36px, $height: 60px);
+}
+
+.program-form__intro {
+  @include font($size: 14px, $height: 18px);
+  text-transform: uppercase;
+}

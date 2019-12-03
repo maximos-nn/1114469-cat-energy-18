@@ -1,3 +1,37 @@
+.advantages__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .advantages__title {
   @include font($size: 36px, $height: 60px);
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 324px;
+    min-height: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__wrapper {
+    width: 1220px;
+  }
+
+  .advantages__item {
+    width: 245px;
+  }
 }

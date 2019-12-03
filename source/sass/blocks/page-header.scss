@@ -1,7 +1,9 @@
 .page-header {
+  width: 280px;
   padding-top: 11px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
 }
 
 .page-header__logo {
@@ -13,5 +15,16 @@
 @media (min-width: $tablet-width) {
   .page-header {
     display: flex;
+    width: 708px;
+    min-height: 58px;
+    padding-top: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: 1220px;
+    min-height: 59px;
+    padding-top: 54px;
   }
 }

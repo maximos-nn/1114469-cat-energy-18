@@ -1,7 +1,5 @@
-.promo-categories__wrapper {
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
+.promo-categories__list {
+  @include list-reset;
 }
 
 .promo-categories__item {
@@ -20,21 +18,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .promo-categories__wrapper {
-    width: 708px;
-    padding: 0 30px;
-  }
-
   .promo-categories__item {
     min-height: 372px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .promo-categories__wrapper {
-    width: 1220px;
-  }
-
   .promo-categories__list {
     display: flex;
     flex-wrap: wrap;

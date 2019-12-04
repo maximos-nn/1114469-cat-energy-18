@@ -1,0 +1,12 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-reset;
+}
+
+.social__item {
+  width: 30px;
+  height: 30px;
+  outline: 1px solid #000000;
+}

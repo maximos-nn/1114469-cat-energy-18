@@ -1,11 +1,8 @@
 .page-footer {
-  padding: 0 20px;
   background-color: $alternative-background;
 }
 
 .page-footer__wrapper {
-  width: 280px;
-  margin: 0 auto;
   min-height: 236px;
 }
 
@@ -26,13 +23,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 708px;
     min-height: 150px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-footer__wrapper {
-    width: 1220px;
   }
 }

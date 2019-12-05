@@ -1,3 +1,9 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .site-list__item {
   @include font($size: 20px, $weight: 500);
   text-transform: uppercase;
@@ -5,4 +11,10 @@
   padding-top: 23px;
   padding-bottom: 22px;
   border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+  }
 }

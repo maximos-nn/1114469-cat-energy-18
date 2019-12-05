@@ -1,3 +1,28 @@
 .page-footer {
   background-color: $alternative-background;
 }
+
+.page-footer__wrapper {
+  min-height: 236px;
+}
+
+.page-footer__logo {
+  min-height: 94px;
+}
+
+.page-footer__social {
+  min-height: 62px;
+}
+
+.page-footer__copyright {
+  min-height: 78px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 150px;
+  }
+}

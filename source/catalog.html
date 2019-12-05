@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header class="page-header">
+  <header class="page-header container">
     <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Изображение логотипа магазина" width="191" height="39">
     </a>
@@ -26,7 +27,7 @@
   <main class="page-main">
 
 
-    <section class="catalog">
+    <section class="catalog container">
       <h1 class="catalog__title">Каталог продукции</h1>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -190,12 +191,12 @@
           </table>
           <a class="catalog__order" href="#">Заказать</a>
         </li>
+        <li class="catalog__item">
+          <p><b class="catalog__more-title">Показать еще 100500 товаров</b></p>
+          <p class="catalog__more-note">На самом деле вкусов гораздо больше!</p>
+          <a class="catalog__show-all" href="#">Показать все</a>
+        </li>
       </ul>
-      <div class="catalog__more">
-        <p><b class="catalog__more-title">Показать еще 100500 товаров</b></p>
-        <p class="catalog__more-note">На самом деле вкусов гораздо больше!</p>
-        <a class="catalog__show-all" href="#">Показать все</a>
-      </div>
     </section>
 
     <section class="extra">
@@ -257,20 +258,22 @@
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Логотип магазина" width="128" height="24">
-    </a>
-    <ul class="page-footer__social social">
-      <li class="social__item"><a class="social__link social__link--vkontakte" href="#"></a></li>
-      <li class="social__item"><a class="social__link social__link--instagram" href="#"></a></li>
-      <li class="social__item"><a class="social__link social__link--facebook" href="#"></a></li>
-    </ul>
-    <p class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="copyright__text">HTML Academy</span>
-        <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип Академии" width="27" height="34">
+    <div class="page-footer__wrapper container">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Логотип магазина" width="128" height="24">
       </a>
-    </p>
+      <ul class="page-footer__social social">
+        <li class="social__item"><a class="social__link social__link--vkontakte" href="#"></a></li>
+        <li class="social__item"><a class="social__link social__link--instagram" href="#"></a></li>
+        <li class="social__item"><a class="social__link social__link--facebook" href="#"></a></li>
+      </ul>
+      <p class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">HTML Academy</span>
+          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип Академии" width="27" height="34">
+        </a>
+      </p>
+    </div>
   </footer>
 
 </body>

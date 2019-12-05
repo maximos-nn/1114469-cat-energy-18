@@ -1,6 +1,10 @@
+.promo-categories__list {
+  @include list-reset;
+}
+
 .promo-categories__item {
   background-color: $alternative-background;
-  width: 320px;
+  min-height: 266px;
 }
 
 .promo-categories__title {
@@ -11,4 +15,22 @@
 .promo-categories__link {
   @include font($height: 16px);
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-categories__item {
+    min-height: 372px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-categories__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .promo-categories__item {
+    width: 570px;
+  }
 }

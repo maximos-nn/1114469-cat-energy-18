@@ -1,3 +1,7 @@
+.cat-story {
+  background-color: $alternative-background;
+}
+
 .cat-story__title {
   @include font($size: 36px, $height: 60px);
 }
@@ -22,6 +26,28 @@
 .cat-story__spent {
   @include font($size: 14px);
   text-align: center;
+}
+
+.cat-story__album {
+  @include list-reset;
+}
+
+.cat-story__photo {
+  display: none;
+
+  img {
+    display: block;
+    max-width: none;
+  }
+}
+
+// .cat-story__photo--before {
+//   width: 150px;
+//   overflow: hidden;
+// }
+
+.cat-story__photo--active {
+  display: block;
 }
 
 .cat-story__controls {

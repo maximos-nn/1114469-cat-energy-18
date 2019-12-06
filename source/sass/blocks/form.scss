@@ -38,3 +38,31 @@
   line-height: 16px;
   text-align: center;
 }
+
+.form__set {
+  border: none;
+}
+
+.form__list {
+  @include list-reset;
+
+  position: relative;
+  width: 320px;
+  border: 1px solid #ededed;
+  margin-left: -20px;
+}
+
+.form__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 3px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    background-color: #68b738;
+    z-index: -1;
+  }
+}

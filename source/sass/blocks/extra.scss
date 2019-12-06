@@ -2,6 +2,10 @@
   @include font($size: 24px, $height: 24px);
 }
 
+.extra__list {
+  @include list-reset;
+}
+
 .extra__title {
   @include font($height: 16px, $color: #222222);
   text-transform: uppercase;
@@ -31,4 +35,40 @@
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   min-height: 289px;
+}
+
+@media (min-width: $tablet-width) {
+  .extra__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .extra__order {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .extra__header {
+    width: 100%;
+  }
+
+  .extra__list {
+    width: 895px;
+  }
+
+  .extra__order {
+    width: 245px;
+  }
+
+  .extra__gift {
+    width: 245px;
+  }
 }

@@ -59,36 +59,46 @@
       </ul>
     </section>
 
-    <section class="cat-story">
-      <h2 class="cat-story__title">Живой пример</h2>
-      <p class="cat-story__story">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <table class="cat-story__progress">
-        <tbody>
-          <tr class="cat-story__metric">
-            <td>снижение веса</td>
-            <td>затрачено времени</td>
-          </tr>
-          <tr class="cat-story__value">
-            <td>5 кг</td>
-            <td>60 дней</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="cat-story__spent">Затраты на питание: 15 000 руб.</p>
-      <ul class="cat-story__album">
-        <li class="cat-story__photo cat-story__photo--before cat-story__photo--active"><img src="img/before-mobile@1x.png" alt="Фото в начале" width="311" height="232"></li>
-        <li class="cat-story__photo cat-story__photo--after"><img src="img/after-mobile@1x.png" alt="Фото в конце" width="311" height="232"></li>
-      </ul>
-      <div class="cat-story__controls">
-        <button class="cat-story__before">Было</button>
-        <button class="cat-story__after">Стало</button>
+    <section class="cat-story min-width">
+      <div class="cat-story__wrapper container">
+        <div class="cat-story__article">
+          <h2 class="cat-story__title">Живой пример</h2>
+          <p class="cat-story__story">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="cat-story__stats">
+            <table class="cat-story__progress">
+              <tbody>
+                <tr class="cat-story__metric">
+                  <td>снижение веса</td>
+                  <td>затрачено времени</td>
+                </tr>
+                <tr class="cat-story__value">
+                  <td>5 кг</td>
+                  <td>60 дней</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="cat-story__spent">Затраты на питание: 15 000 руб.</p>
+          </div>
+        </div>
+        <div class="cat-story__look">
+          <ul class="cat-story__album">
+            <li class="cat-story__photo cat-story__photo--before cat-story__photo--active"><img src="img/before-mobile@1x.png" alt="Фото в начале" width="311" height="232"></li>
+            <li class="cat-story__photo cat-story__photo--after"><img src="img/after-mobile@1x.png" alt="Фото в конце" width="311" height="232"></li>
+          </ul>
+          <div class="cat-story__controls">
+            <button class="cat-story__before">Было</button>
+            <button class="cat-story__after">Стало</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts min-width">
       <h2 class="visually-hidden">Адрес магазина</h2>
-      <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__wrapper container">
+        <p class="contacts__invite">приглашаем<br>к сотрудничеству дилеров!</p>
+        <p class="contacts__address"><span>ул. Большая Конюшенная, д. 19/8</span> <span>Санкт-Петербург</span></p>
+      </div>
       <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323011%2C59.938642&mode=search&sll=44.005986%2C56.326887&sspn=0.519104%2C0.302913&text=ул.%20Большая%20Конюшенная%2C%20д.%2019%2F8%20Санкт-Петербург&z=17.79">
         <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Карта расположения магазина" width="320" height="400">
       </a>
@@ -96,7 +106,7 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer min-width">
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo">
         <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Логотип магазина" width="128" height="24">

@@ -1,6 +1,8 @@
 .form__field {
   @include font($height: 18px, $color: #222222);
   text-transform: uppercase;
+  display: inline-block;
+  width: 100%;
 
   input {
     @include font($height: 18px, $color: #444444);
@@ -32,9 +34,58 @@
   text-transform: uppercase;
   background-color: #68b738;
   border: none;
+  width: 100%;
 }
 
 .form__notice {
   line-height: 16px;
   text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.form__set {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form__list {
+  @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .form__extra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form__list-item {
+      width: 50%;
+    }
+  }
+
+  .form__notice,
+  .form__submit {
+    width: 45%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__extra {
+    .form__list-item {
+      width: 25%;
+    }
+  }
+
+  .form__basic {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__field,
+  .form__type,
+  .form__bio {
+    width: 570px;
+  }
 }

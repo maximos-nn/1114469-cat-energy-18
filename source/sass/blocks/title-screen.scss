@@ -1,5 +1,5 @@
 .title-screen {
-  min-height: 480px;
+  // min-height: 480px;
   position: relative;
 
   &::before {
@@ -13,25 +13,41 @@
     background-color: #68b738;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
+    background-size: cover;
   }
+}
+
+.title-screen__wrapper {
+  padding-top: 7px;
+  padding-bottom: 22px;
 }
 
 .title-screen__title {
   @include font($size: 36px, $height: 36px, $color: #ffffff);
   text-align: center;
+  margin: 20px 0;
 }
 
 .title-screen__slogan {
   @include font($size: 14px, $height: 14px, $color: #ffffff);
   text-align: center;
   text-transform: uppercase;
+  margin: 25px 0 28px;
+}
+
+.title-screen__image {
+  display: block;
+  margin-bottom: 4px;
 }
 
 .title-screen__link {
   @include font($size: 14px, $height: 18px, $color: #ffffff);
   text-align: center;
   text-transform: uppercase;
+  display: block;
+  min-height: 20px;
+  padding: 10px;
   background-color: #68b738;
 }
 

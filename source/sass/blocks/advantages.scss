@@ -1,13 +1,12 @@
 .advantages {
-  padding-top: 18px;
+  padding-top: 17px;
   padding-bottom: 22px;
 }
 
 .advantages__title {
   @include font($size: 36px, $height: 60px);
-
   margin-top: 0;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 }
 
 .advantages__list {
@@ -15,8 +14,10 @@
 }
 
 .advantages__item {
+  line-height: 18px;
   padding-left: 80px;
-  margin-bottom: 20px;
+  padding-top: 2px;
+  margin-bottom: 24px;
   position: relative;
 
   &::before {
@@ -25,7 +26,7 @@
     height: 60px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1px;
     z-index: -1;
     background-color: #68b738;
     background-repeat: no-repeat;
@@ -74,6 +75,7 @@
     width: 245px;
     min-height: 258px;
     padding-top: 39px;
+    margin-bottom: 20px;
     padding-left: 0;
     padding-right: 79px;
 
@@ -88,7 +90,6 @@
 
     &::after {
       @include font($size: 281px, $height: 281px, $color: $alternative-background);
-
       position: absolute;
       top: 0;
       left: 113px;
@@ -114,6 +115,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .advantages {
+    padding-top: 43px;
+  }
+
   .advantages__item {
     width: 245px;
     padding-right: 0;

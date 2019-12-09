@@ -1,5 +1,4 @@
 .title-screen {
-  // min-height: 480px;
   position: relative;
 
   &::before {
@@ -21,6 +20,8 @@
 .title-screen__wrapper {
   padding-top: 7px;
   padding-bottom: 22px;
+  position: relative;
+  overflow: hidden;
 }
 
 .title-screen__title {
@@ -38,6 +39,8 @@
 
 .title-screen__image {
   display: block;
+  width: 280px;
+  height: 270px;
   margin-bottom: 4px;
 }
 
@@ -52,39 +55,94 @@
 }
 
 @media (min-width: $tablet-width) {
-  .title-screen {
-    min-height: 810px;
-
-    &::before {
-      display: none;
-    }
+  .title-screen::before {
+    display: none;
   }
 
-  .title-screen__title,
-  .title-screen__slogan {
+  .title-screen__wrapper {
+    padding-bottom: 0;
+  }
+
+  .title-screen__title {
+    font-size: 60px;
+    line-height: 60px;
     color: #111111;
     text-align: left;
+    padding: 0 88px;
+  }
+
+  .title-screen__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+    text-align: left;
+    padding: 0 88px;
+    margin: 41px 0 20px;
   }
 
   .title-screen__image {
+    width: 709px;
+    height: 609px;
+    margin-bottom: 0;
+  }
+
+  .title-screen__link {
+    font-size: 20px;
+    line-height: 20px;
+    width: 225px;
+    min-height: 27px;
     position: absolute;
-    left: 50%;
-    z-index: -1;
+    left: 119px;
+    top: 256px;
+    padding-top: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .title-screen {
-    min-height: 554px;
+    min-height: 654px;
 
     &::before {
       display: block;
-      width: 720px;
+      min-width: 720px;
+      width: unset;
       height: 696px;
-      top: unset;
-      bottom: 0;
+      top: -122px;
+      // bottom: 0;
       left: 50%;
+      right: 0;
       background-image: url("../img/index-background-desktop@1x.jpg");
     }
+  }
+
+  .title-screen__wrapper {
+    min-height: 647px;
+    // padding-top: 0;
+    // overflow: visible;
+  }
+
+  .title-screen__title,
+  .title-screen__slogan {
+    width: 450px;
+    padding: 0;
+    margin-left: 80px;
+  }
+
+  .title-screen__title {
+    margin-top: 93px;
+  }
+
+  .title-screen__image {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    top: 20px;
+    left: 490px;
+  }
+
+  .title-screen__link {
+    position: static;
+    margin-top: 53px;
+    margin-left: 80px;
   }
 }

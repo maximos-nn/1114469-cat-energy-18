@@ -1,5 +1,37 @@
 .main-nav__toggle {
   display: none;
+  position: absolute;
+  top: 23px;
+  left: calc(50% + 116px);
+  width: 25px;
+  height: 19px;
+  border: none;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+@media (max-width: $tablet-width - 1) {
+
+  .main-nav--closed .main-nav__toggle {
+    display: block;
+    background-image: url("../img/icon-mobile-menu.svg");
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    display: block;
+    width: 19px;
+    left: calc(50% + 119px);
+    background-image: url("../img/icon-close.svg");
+  }
+
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {

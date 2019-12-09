@@ -1,29 +1,24 @@
 .page-header {
-  // width: 280px;
   padding-top: 11px;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  // margin: 0 auto;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .page-header__logo {
   display: block;
   min-height: 54px;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
+  .page-header__wrapper {
     display: flex;
-    // width: 708px;
     min-height: 58px;
     padding-top: 24px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
-    // width: 1220px;
+  .page-header__wrapper {
     min-height: 59px;
     padding-top: 54px;
   }

@@ -1,4 +1,25 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
 .copyright__text {
   font-size: 16px;
   line-height: 16px;
+}
+
+.copyright__image {
+  width: 27px;
+  height: 34px;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-right: 24px;
+  }
 }

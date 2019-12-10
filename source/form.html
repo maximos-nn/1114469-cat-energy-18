@@ -10,18 +10,20 @@
 
 <body>
 
-  <header class="page-header container">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Изображение логотипа магазина" width="191" height="39">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item"><a href="index.html">Главная</a></li>
-        <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="site-list__item site-list__item--active"><a href="form.html">Подбор программы</a></li>
-      </ul>
-    </nav>
+  <header class="page-header min-width">
+    <div class="page-header__wrapper container">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Изображение логотипа магазина" width="191" height="39">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+          <li class="site-list__item site-list__item--active"><a href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main min-width">
@@ -98,9 +100,9 @@
         <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Логотип магазина" width="128" height="24">
       </a>
       <ul class="page-footer__social social">
-        <li class="social__item"><a class="social__link social__link--vkontakte" href="#"></a></li>
-        <li class="social__item"><a class="social__link social__link--instagram" href="#"></a></li>
-        <li class="social__item"><a class="social__link social__link--facebook" href="#"></a></li>
+        <li class="social__item"><a class="social__link social__link--vkontakte" href="#" aria-label="ВКонтакте"></a></li>
+        <li class="social__item"><a class="social__link social__link--instagram" href="#" aria-label="Инстаграмм"></a></li>
+        <li class="social__item"><a class="social__link social__link--facebook" href="#" aria-label="Фуйсбук"></a></li>
       </ul>
       <p class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
@@ -111,6 +113,7 @@
     </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>

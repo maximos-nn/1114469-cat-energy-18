@@ -1,5 +1,4 @@
 .title-screen {
-  min-height: 480px;
   position: relative;
 
   &::before {
@@ -13,62 +12,142 @@
     background-color: #68b738;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
+    background-size: cover;
   }
+}
+
+.title-screen__wrapper {
+  padding-top: 7px;
+  padding-bottom: 22px;
+  position: relative;
+  overflow: hidden;
 }
 
 .title-screen__title {
   @include font($size: 36px, $height: 36px, $color: #ffffff);
   text-align: center;
+  margin: 20px 0;
 }
 
 .title-screen__slogan {
   @include font($size: 14px, $height: 14px, $color: #ffffff);
   text-align: center;
   text-transform: uppercase;
+  margin: 25px 0 28px;
+}
+
+.title-screen__image {
+  display: block;
+  width: 280px;
+  height: 270px;
+  margin-bottom: 4px;
 }
 
 .title-screen__link {
   @include font($size: 14px, $height: 18px, $color: #ffffff);
   text-align: center;
   text-transform: uppercase;
+  display: block;
+  min-height: 20px;
+  padding: 10px;
   background-color: #68b738;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .title-screen {
-    min-height: 810px;
-
-    &::before {
-      display: none;
-    }
+  .title-screen::before {
+    display: none;
   }
 
-  .title-screen__title,
-  .title-screen__slogan {
+  .title-screen__wrapper {
+    padding-bottom: 0;
+  }
+
+  .title-screen__title {
+    font-size: 60px;
+    line-height: 60px;
     color: #111111;
     text-align: left;
+    padding: 0 88px;
+  }
+
+  .title-screen__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+    text-align: left;
+    padding: 0 88px;
+    margin: 41px 0 20px;
   }
 
   .title-screen__image {
+    width: 709px;
+    height: 609px;
+    margin-bottom: 0;
+  }
+
+  .title-screen__link {
+    font-size: 20px;
+    line-height: 20px;
+    width: 225px;
+    min-height: 27px;
     position: absolute;
-    left: 50%;
-    z-index: -1;
+    left: 119px;
+    top: 256px;
+    padding-top: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .title-screen {
-    min-height: 554px;
+    min-height: 654px;
 
     &::before {
       display: block;
-      width: 720px;
+      min-width: 720px;
+      width: auto;
       height: 696px;
-      top: unset;
-      bottom: 0;
+      top: -122px;
       left: 50%;
+      right: 0;
       background-image: url("../img/index-background-desktop@1x.jpg");
     }
+  }
+
+  .title-screen__wrapper {
+    min-height: 647px;
+  }
+
+  .title-screen__title,
+  .title-screen__slogan {
+    width: 450px;
+    padding: 0;
+    margin-left: 80px;
+  }
+
+  .title-screen__title {
+    margin-top: 93px;
+  }
+
+  .title-screen__image {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    top: 20px;
+    left: 490px;
+  }
+
+  .title-screen__link {
+    position: static;
+    margin-top: 53px;
+    margin-left: 80px;
   }
 }

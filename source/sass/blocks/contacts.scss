@@ -1,3 +1,7 @@
+.contacts {
+  position: relative;
+}
+
 .contacts--inner {
   background-color: $alternative-background;
 }
@@ -20,7 +24,17 @@
 
 .contacts__map {
   display: block;
+  width: 100%;
+  object-fit: cover;
   margin: 0 auto;
+}
+
+.contacts iframe {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  // z-index: -1;
+  border: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -47,6 +61,7 @@
       width: 400px;
       position: absolute;
       top: 90px;
+      z-index: 1;
       left: calc(50% - 610px);
       padding-left: 70px;
       padding-right: 90px;

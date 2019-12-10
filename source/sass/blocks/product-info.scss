@@ -1,8 +1,31 @@
 .product-info {
   font-size: 12px;
   line-height: 16px;
+  border-collapse: collapse;
+  border: none;
 }
 
 .product-info__property-value {
   text-align: right;
+  padding: 0;
+}
+
+.product-info__property-name {
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .product-info {
+    font-size: 16px;
+  }
+
+  .product-info__property {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .product-info__property-value,
+  .product-info__property-name {
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
 }

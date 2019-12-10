@@ -17,6 +17,11 @@
   }
 }
 
+.page-header__logo-image {
+  display: block;
+  margin-bottom: 15px;
+}
+
 @media (min-width: $tablet-width) {
   .page-header {
     border: none;

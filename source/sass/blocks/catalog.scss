@@ -36,14 +36,14 @@
 .catalog__item--more {
   display: list-item;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin-top: 25px;
-      border-bottom: 1px solid #ededed;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 25px;
+    border-bottom: 1px solid #ededed;
+  }
 }
 
 .catalog__item-link,
@@ -285,6 +285,7 @@
   .catalog__more-title {
     padding: 0;
   }
+
   .catalog__more-note {
     padding: 0;
     margin-bottom: 85px;

@@ -23,6 +23,10 @@
   }
 }
 
+.page-footer__logo-image {
+  pointer-events: none; // IE bug: parent a:active doesn't work
+}
+
 .page-footer__social {
   min-height: 62px;
   border-top: 1px solid #d9d9d9;

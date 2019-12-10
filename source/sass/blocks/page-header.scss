@@ -20,6 +20,7 @@
 .page-header__logo-image {
   display: block;
   margin-bottom: 15px;
+  pointer-events: none; // IE bug: parent a:active doesn't work
 }
 
 @media (min-width: $tablet-width) {

@@ -8,6 +8,11 @@
 }
 
 .page-header__logo {
+  display: block;
+  width: 191px;
+  height: 39px;
+  margin-bottom: 15px;
+
   &[href]:hover {
     opacity: 0.8;
   }
@@ -19,7 +24,6 @@
 
 .page-header__logo-image {
   display: block;
-  margin-bottom: 15px;
   pointer-events: none; // IE bug: parent a:active doesn't work
 }
 

@@ -1,22 +1,170 @@
+.form__bio {
+  margin-bottom: 10px;
+}
+
+// .form__basic {
+//   padding-bottom: 19px;
+// }
+
+.form__list.form__list--program {
+  padding-top: 20px;
+  padding-bottom: 9px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -21px;
+    border-bottom: 1px solid #ededed;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 7px;
+    border-bottom: 1px solid #ededed;
+  }
+}
+
 .form__field {
   @include font($height: 18px, $color: #222222);
   text-transform: uppercase;
-  display: inline-block;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
 
   input {
     @include font($height: 18px, $color: #444444);
     text-transform: uppercase;
+    box-sizing: border-box;
+    height: 45px;
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+
+    &:hover {
+      border-color: #cdcdcd;
+    }
+
+    &:focus {
+      padding: 9px 14px;
+      border: 2px solid #444444;
+    }
+
+    &:invalid {
+      padding: 9px 14px;
+      border: 2px solid #ff8282;
+    }
+  }
+
+  &--name input {
+    margin-left: 14px;
+  }
+
+  &--weight input {
+    margin-left: 17px;
+  }
+
+  &--age input {
+    margin-left: 15px;
+  }
+
+  &--email input {
+    margin-left: 12px;
+  }
+
+  &--phone input {
+    margin-left: 10px;
+  }
+}
+
+.form__list-item {
+  position: relative;
+  margin-bottom: 11px;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+  }
+
+  input[type="radio"]:checked + .form__radio::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    border-radius: 50%;
+    background-color: #68b738;
+  }
+
+  input[type="checkbox"]:checked + .form__check::after {
+    content: "";
+    width: 22px;
+    height: 17px;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  /*
+    При задании прозрачности тэгу label, IE не меняет её у псевдоэлементов.
+    Если задать её дополнительно и псевдоэлементам, то в других браузерах
+    происходит двойное применение свойства opacity. Поэтому использую
+    дополнительный span. Кроме того, селектор :active не работает в IE,
+    если у интерактивного элемента есть вложенные тэги. Для решения этой проблемы
+    задаю "pointer-events: none;" для спана.
+  */
+  input:active + label span,
+  input:active + label::before,
+  input:active + label::after {
+    opacity: 0.3;
+  }
+
+  label:hover::before {
+    border-color: #bababa;
+  }
+
+  span {
+    display: block;
+    pointer-events: none; // IE bug: parent label:active doesn't work
   }
 }
 
 .form__radio {
   @include font($height: 18px, $color: #222222);
   text-transform: uppercase;
+  display: block;
+  padding-left: 46px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  &::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
 }
 
 .form__title {
   @include font($size: 24px, $height: 24px);
+  margin-bottom: 34px;
 }
 
 .form__comment {
@@ -27,27 +175,67 @@
 .form__check {
   @include font($height: 18px, $color: #222222);
   text-transform: uppercase;
+  display: block;
+  padding-left: 46px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  &::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+  }
 }
 
 .form__submit {
   @include font($color: #ffffff);
   text-transform: uppercase;
-  background-color: #68b738;
   border: none;
   width: 100%;
+  display: block;
+  min-height: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #68b738;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .form__notice {
   line-height: 16px;
   text-align: center;
   display: inline-block;
+  vertical-align: top;
   width: 100%;
+  margin-top: 21px;
+  margin-bottom: 32px;
 }
 
 .form__set {
   padding: 0;
   margin: 0;
   border: none;
+  margin-top: 20px;
+}
+
+.form__comment {
+  display: block;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 13px;
+  resize: none;
 }
 
 .form__list {
@@ -55,7 +243,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form__extra {
+  .form__list--extra {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -72,7 +260,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .form__extra {
+  .form__list--extra {
     .form__list-item {
       width: 25%;
     }
@@ -84,7 +272,7 @@
   }
 
   .form__field,
-  .form__type,
+  .form__list--program,
   .form__bio {
     width: 570px;
   }

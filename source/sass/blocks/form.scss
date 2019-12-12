@@ -2,9 +2,9 @@
   margin-bottom: 10px;
 }
 
-// .form__basic {
-//   padding-bottom: 19px;
-// }
+.form__basic {
+  margin-bottom: 27px;
+}
 
 .form__list.form__list--program {
   padding-top: 20px;
@@ -86,14 +86,14 @@
   position: relative;
   margin-bottom: 11px;
 
-  input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    opacity: 0;
-  }
+  // input {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 30px;
+  //   height: 30px;
+  //   opacity: 0;
+  // }
 
   input[type="radio"]:checked + .form__radio::after {
     content: "";
@@ -124,10 +124,20 @@
     дополнительный span. Кроме того, селектор :active не работает в IE,
     если у интерактивного элемента есть вложенные тэги. Для решения этой проблемы
     задаю "pointer-events: none;" для спана.
+    Кроме того, Edge не стилизует label при клике мышью. При переключении
+    состояния с клавиатуры всё работает корректно. Для решения вопроса использую
+    label:active. Но необходимо принудительно разнести состояния label:active
+    и label:not(:active), иначе возможна ситуация двойного применения свойства
+    opacity в других браузерах.
+    Также существует баг в хромах с "залипанием" радио-кнопки, активированной
+    с клавиатуры (https://bugs.chromium.org/p/chromium/issues/detail?id=973001).
   */
-  input:active + label span,
-  input:active + label::before,
-  input:active + label::after {
+  input:active + label:not(:active) span,
+  input:active + label:not(:active)::before,
+  input:active + label:not(:active)::after,
+  input:active + label:active span,
+  input:active + label:active::before,
+  input:active + label:active::after {
     opacity: 0.3;
   }
 
@@ -164,12 +174,13 @@
 
 .form__title {
   @include font($size: 24px, $height: 24px);
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .form__comment {
   @include font($height: 18px, $color: #444444);
   text-transform: uppercase;
+  margin-bottom: 13px;
 }
 
 .form__check {
@@ -200,7 +211,7 @@
   display: block;
   min-height: 20px;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   background-color: #68b738;
 
   &:hover {
@@ -223,10 +234,9 @@
 }
 
 .form__set {
-  padding: 0;
+  padding: 10px 0 15px;
   margin: 0;
   border: none;
-  margin-top: 20px;
 }
 
 .form__comment {

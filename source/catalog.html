@@ -15,7 +15,7 @@
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Изображение логотипа магазина" width="191" height="39">
       </a>
-      <nav class="main-nav">
+      <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a href="index.html">Главная</a></li>
@@ -26,10 +26,9 @@
     </div>
   </header>
 
-  <main>
+  <main class="min-width">
 
-
-    <section class="catalog min-width">
+    <section class="catalog">
       <div class="catalog__wrapper container">
         <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list">
@@ -226,17 +225,17 @@
           <a href="#">
             <h3 class="extra__title">Сахарозаменитель</h3>
           </a>
-          <p>
+          <p class="extra__info">
             <span class="extra__quantity">1 упаковка (100 г)</span>
             <span class="extra__price">200 Р.</span>
-          </p>
+          </p class="extra__info">
           <a class="extra__order" href="#">Заказать</a>
         </li>
         <li class="extra__item">
           <a href="#">
             <h3 class="extra__title">Питьевая вода</h3>
           </a>
-          <p>
+          <p class="extra__info">
             <span class="extra__quantity">5 литров</span>
             <span class="extra__price">50 Р.</span>
           </p>
@@ -246,7 +245,7 @@
           <a href="#">
             <h3 class="extra__title">Молоко</h3>
           </a>
-          <p>
+          <p class="extra__info">
             <span class="extra__quantity">1 литр</span>
             <span class="extra__price">100 Р.</span>
           </p>
@@ -256,14 +255,14 @@
           <a href="#">
             <h3 class="extra__title">Витамины</h3>
           </a>
-          <p>
+          <p class="extra__info">
             <span class="extra__quantity">1 упаковка (30 г)</span>
             <span class="extra__price">300 Р.</span>
           </p>
           <a class="extra__order" href="#">Заказать</a>
         </li>
       </ul>
-      <p class="extra__gift">Закажите все и получите чехол для кота в подарок!</p>
+      <p class="extra__gift">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
     </section>
 
     <section class="contacts contacts--inner">
@@ -280,7 +279,7 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer min-width">
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo" href="index.html">
         <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Логотип магазина" width="128" height="24">

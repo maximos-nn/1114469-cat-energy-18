@@ -29,5 +29,22 @@
   .program-form__form {
     width: 630px;
     margin-left: 41px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-form__form {
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 70px;
+  }
+
+  .program-form__title {
+    margin-top: 51px;
+  }
+
+  .program-form__intro {
+    margin-left: 0;
   }
 }

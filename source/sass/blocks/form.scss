@@ -99,7 +99,6 @@
       position: absolute;
       top: 16px;
       right: 16px;
-      // display: block;
       width: 17px;
       height: 13px;
       background-image: url("../img/icon-mail.svg");
@@ -115,7 +114,6 @@
       position: absolute;
       top: 13px;
       right: 13px;
-      // display: block;
       width: 20px;
       height: 20px;
       background-image: url("../img/icon-phone.svg");
@@ -213,7 +211,7 @@
 
 .form__title {
   @include font($size: 24px, $height: 24px);
-  width: min-content;
+  max-width: 221px;
   margin-left: -20px;
   margin-bottom: 24px;
   padding-left: 20px;
@@ -226,7 +224,6 @@
     position: absolute;
     left: 0;
     right: 0;
-    // right: calc(50vw + 160px);
     margin-top: 14px;
     border-bottom: 3px solid #68b738;
     z-index: -1;
@@ -403,7 +400,7 @@
   .form__title {
     font-size: 36px;
     line-height: 36px;
-    width: auto;
+    max-width: none;
     margin-left: -40px;
     margin-bottom: 66px;
     padding-left: 40px;

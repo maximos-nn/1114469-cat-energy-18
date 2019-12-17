@@ -34,45 +34,52 @@
       <form class="program-form__form form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
         <div class="form__basic">
           <div class="form__bio">
-            <label class="form__field">Имя:*<input type="text" name="name" placeholder="Барсик" required></label>
-            <label class="form__field">Вес (кг):*<input type="text" name="weight" placeholder="7" required></label>
-            <label class="form__field">Возраст (лет):<input type="text" name="age" placeholder="7"></label>
+            <label class="form__field form__field--name">Имя:*<input type="text" name="name" placeholder="Барсик" required></label>
+            <label class="form__field form__field--weight">Вес (кг):*<input type="text" name="weight" placeholder="7" required></label>
+            <label class="form__field form__field--age">Возраст (лет):<input type="text" name="age" placeholder="7"></label>
           </div>
-          <ul class="form__list form__type">
+          <ul class="form__list form__list--program">
             <li class="form__list-item">
-              <label class="form__radio"><input type="radio" name="type" value="weight loss" checked>Похудение</label>
+              <input class="visually-hidden" type="radio" id="radio-loss" name="program" value="weight loss" checked>
+              <label class="form__radio" for="radio-loss"><span>Похудение</span></label>
             </li>
             <li class="form__list-item">
-              <label class="form__radio"><input type="radio" name="type" value="weight gain">Набор массы</label>
+              <input class="visually-hidden" type="radio" id="radio-gain" name="program" value="weight gain">
+              <label class="form__radio" for="radio-gain"><span>Набор массы</span></label>
             </li>
             <li class="form__list-item">
-              <label class="form__radio"><input type="radio" name="type" value="advice">Не знаю (Нужен ваш совет)</label>
+              <input class="visually-hidden" type="radio" id="radio-advice" name="program" value="advice">
+              <label class="form__radio" for="radio-advice"><span>Не знаю (Нужен ваш совет)</span></label>
             </li>
           </ul>
         </div>
         <fieldset class="form__set">
           <legend class="form__title">Контактные данные (владельца кота)</legend>
-          <label class="form__field">E-mail:*<input type="email" placeholder="kuklachev@gmail.com" required></label>
-          <label class="form__field">Телефон:*<input type="tel" placeholder="8 (960) 900-60-90" required></label>
+          <label class="form__field form__field--email">E-mail:*<input type="email" placeholder="kuklachev@gmail.com" required></label>
+          <label class="form__field form__field--phone">Телефон:*<input type="tel" placeholder="8 (960) 900-60-90" required></label>
         </fieldset>
         <fieldset class="form__set">
           <legend class="form__title">Комментарий</legend>
           <textarea class="form__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="form__set">
+        <fieldset class="form__set form__set--extra">
           <legend class="form__title">Дополнительно</legend>
-          <ul class="form__list form__extra">
+          <ul class="form__list form__list--extra">
             <li class="form__list-item">
-              <label class="form__check"><input type="checkbox" name="sweetener" checked>Сахарозаменитель</label>
+              <input class="visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
+              <label class="form__check" for="sweetener"><span>Сахарозаменитель</span></label>
             </li>
             <li class="form__list-item">
-              <label class="form__check"><input type="checkbox" name="water">Питьевая вода</label>
+              <input class="visually-hidden" type="checkbox" id="water" name="water">
+              <label class="form__check" for="water"><span>Питьевая вода</span></label>
             </li>
             <li class="form__list-item">
-              <label class="form__check"><input type="checkbox" name="milk">Молоко</label>
+              <input class="visually-hidden" type="checkbox" id="milk" name="milk">
+              <label class="form__check" for="milk"><span>Молоко</span></label>
             </li>
             <li class="form__list-item">
-              <label class="form__check"><input type="checkbox" name="vitamins">Витамины</label>
+              <input class="visually-hidden" type="checkbox" id="vitamins" name="vitamins">
+              <label class="form__check" for="vitamins"><span>Витамины</span></label>
             </li>
           </ul>
         </fieldset>
@@ -90,6 +97,7 @@
       <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323011%2C59.938642&mode=search&sll=44.005986%2C56.326887&sspn=0.519104%2C0.302913&text=ул.%20Большая%20Конюшенная%2C%20д.%2019%2F8%20Санкт-Петербург&z=17.79">
         <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Карта расположения магазина" width="320" height="400">
       </a>
+      <iframe class="contacts__frame" src="https://yandex.ru/map-widget/v1/-/CGhfzC1y" width="100%" height="362"></iframe>
     </section>
 
   </main>

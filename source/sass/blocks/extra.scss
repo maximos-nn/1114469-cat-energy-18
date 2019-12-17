@@ -1,22 +1,61 @@
+.extra {
+  padding-top: 10px;
+}
+
 .extra__header {
   @include font($size: 24px, $height: 24px);
+  display: inline-block;
+  margin-top: 18px;
+  margin-bottom: 34px;
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-right: 22px;
+  background-color: #ffffff;
+
+  &::before {
+    content: "";
+    min-width: 320px;
+    margin-top: 14px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid #68b738;
+    z-index: -1;
+  }
 }
 
 .extra__list {
   @include list-reset;
+
+  margin-bottom: 39px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.extra__item {
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .extra__title {
   @include font($height: 16px, $color: #222222);
   text-transform: uppercase;
+  margin-top: 14px;
+  margin-bottom: 10px;
 }
 
-.extra__quantity {
+.extra__info {
   line-height: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 15px;
 }
+
+// .extra__quantity {
+//   line-height: 14px;
+// }
 
 .extra__price {
-  line-height: 14px;
+  // line-height: 14px;
   text-align: right;
 }
 
@@ -24,28 +63,119 @@
   @include font($color: #ffffff);
   text-transform: uppercase;
   text-align: center;
+  display: block;
+  width: 260px;
+  padding: 10px;
+  margin-bottom: 17px;
   background-color: #68b738;
 }
 
 .extra__gift {
   font-size: 16px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 35px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 42px;
   color: #ffffff;
   background-color: #68b738;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  min-height: 289px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 127px;
+    position: relative;
+    top: 65px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .extra__header {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 57px;
+    margin-bottom: 80px;
+    margin-left: -2px;
+    padding-left: 39px;
+    padding-right: 36px;
+
+    &::before {
+      margin-top: 22px;
+    }
+  }
+
+  .extra__list {
+    margin-bottom: 69px;
+    border-top-color: rgba(205, 205, 205, 0.5);
+  }
+
   .extra__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 24px 37px;
+    padding-right: 36px;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+    border-top: none;
+    border-bottom: 1px solid rgba(205, 205, 205, 0.75);
+  }
+
+  .extra__item:last-child {
+    border-bottom-color: rgba(205, 205, 205, 0.5);
+  }
+
+  .extra__title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+
+  .extra__info {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 6px;
+  }
+
+  .extra__quantity {
+    text-align: right;
+    margin-left: 10px;
+  }
+
+  .extra__price {
+    min-width: 85px;
+    margin-left: 10px;
   }
 
   .extra__order {
     width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .extra__gift {
+    text-align: left;
+    position: relative;
+    // min-height: 108px;
+    padding-top: 72px;
+    padding-bottom: 68px;
+    padding-left: 423px;
+    padding-right: 100px;
+    margin-bottom: 76px;
+
+    &::before {
+      position: absolute;
+      left: 91px;
+      margin: 0;
+    }
   }
 }
 
@@ -54,21 +184,69 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 86px;
   }
 
   .extra__header {
-    width: 100%;
+    width: 339px;
+    margin-top: 65px;
+    margin-left: -40px;
   }
 
   .extra__list {
     width: 895px;
+    margin-bottom: 0;
+    border-top-color: #cdcdcd;
+  }
+
+  .extra__item {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .extra__item:last-child {
+    border-bottom-color: #cdcdcd;
+  }
+
+  .extra__title {
+    min-width: 315px;
+    margin: 0;
+  }
+
+  .extra__info {
+    margin: 0;
+    margin-top: 6px;
+  }
+
+  .extra__quantity {
+    min-width: 235px;
+    text-align: left;
+  }
+
+  .extra__price {
+    min-width: 80px;
+    text-align: left;
   }
 
   .extra__order {
-    width: 245px;
+    width: 225px;
+    margin-bottom: 1px;
   }
 
   .extra__gift {
-    width: 245px;
+    text-align: center;
+    width: 185px;
+    padding: 0 30px;
+    margin-bottom: 0;
+
+    &::before {
+      position: relative;
+      left: auto;
+      margin: 0 auto;
+      margin-bottom: 127px;
+    }
   }
 }

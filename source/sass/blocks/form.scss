@@ -1,51 +1,310 @@
+.form__bio {
+  margin-bottom: 10px;
+}
+
+.form__basic {
+  margin-bottom: 27px;
+}
+
+.form__list.form__list--program {
+  padding-top: 20px;
+  padding-bottom: 9px;
+
+  &::before {
+    content: "";
+    min-width: 320px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -21px;
+    border-bottom: 1px solid #ededed;
+  }
+
+  &::after {
+    content: "";
+    min-width: 320px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 7px;
+    border-bottom: 1px solid #ededed;
+  }
+}
+
 .form__field {
   @include font($height: 18px, $color: #222222);
   text-transform: uppercase;
-  display: inline-block;
+  white-space: nowrap;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
 
   input {
     @include font($height: 18px, $color: #444444);
     text-transform: uppercase;
+    box-sizing: border-box;
+    height: 45px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+    outline: none;
+
+    &:invalid {
+      padding: 9px 14px;
+      border: 2px solid #ff8282;
+    }
+
+    &:hover {
+      border-color: #cdcdcd;
+    }
+
+    &:focus {
+      padding: 9px 14px;
+      border: 2px solid #444444;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  &--name input {
+    margin-left: 14px;
+  }
+
+  &--weight input {
+    margin-left: 17px;
+  }
+
+  &--age input {
+    margin-left: 15px;
+  }
+
+  &.form__field--email input {
+    margin-left: 11px;
+    padding-right: 40px;
+  }
+
+  &.form__field--phone input {
+    margin-left: 10px;
+    padding-right: 40px;
+  }
+
+  &--email {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 17px;
+      height: 13px;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--phone {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 13px;
+      right: 13px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.form__list-item {
+  position: relative;
+  margin-bottom: 11px;
+
+  input[type="radio"]:checked + .form__radio::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    border-radius: 50%;
+    background-color: #68b738;
+  }
+
+  input[type="checkbox"]:checked + .form__check::after {
+    content: "";
+    width: 21px;
+    height: 16px;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  input:focus + label::before {
+    border: 2px solid #444444;
+  }
+
+  /*
+    При задании прозрачности тэгу label, IE не меняет её у псевдоэлементов.
+    Если задать её дополнительно и псевдоэлементам, то в других браузерах
+    происходит двойное применение свойства opacity. Поэтому использую
+    дополнительный span. Кроме того, селектор :active не работает в IE,
+    если у интерактивного элемента есть вложенные тэги. Для решения этой проблемы
+    задаю "pointer-events: none;" для спана.
+    Edge не стилизует label при клике мышью. При переключении состояния
+    с клавиатуры всё работает корректно. Для решения вопроса использую
+    label:active. Но необходимо принудительно разнести состояния label:active
+    и label:not(:active), иначе возможна ситуация двойного применения свойства
+    opacity в других браузерах.
+    Также существует баг в хромах с "залипанием" радио-кнопки, активированной
+    с клавиатуры (https://bugs.chromium.org/p/chromium/issues/detail?id=973001).
+  */
+  input:active + label:not(:active) span,
+  input:active + label:not(:active)::before,
+  input:active + label:not(:active)::after,
+  input:active + label:active span,
+  input:active + label:active::before,
+  input:active + label:active::after {
+    opacity: 0.3;
+  }
+
+  label:hover::before {
+    border-color: #bababa;
+  }
+
+  span {
+    display: block;
+    pointer-events: none; // IE bug: parent label:active doesn't work
   }
 }
 
 .form__radio {
   @include font($height: 18px, $color: #222222);
   text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 46px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
 }
 
 .form__title {
   @include font($size: 24px, $height: 24px);
+  max-width: 221px;
+  margin-left: -20px;
+  margin-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ffffff;
+
+  &::before {
+    content: "";
+    min-width: 320px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 14px;
+    border-bottom: 3px solid #68b738;
+    z-index: -1;
+  }
 }
 
 .form__comment {
   @include font($height: 18px, $color: #444444);
   text-transform: uppercase;
+  display: block;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 13px;
+  margin-bottom: 13px;
+  resize: none;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  outline: none;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    padding: 12px;
+    border: 2px solid #444444;
+  }
 }
 
 .form__check {
   @include font($height: 18px, $color: #222222);
   text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 46px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+  }
 }
 
 .form__submit {
   @include font($color: #ffffff);
   text-transform: uppercase;
-  background-color: #68b738;
   border: none;
   width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #68b738;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .form__notice {
   line-height: 16px;
   text-align: center;
   display: inline-block;
+  vertical-align: top;
   width: 100%;
+  margin-top: 21px;
+  margin-bottom: 32px;
 }
 
 .form__set {
-  padding: 0;
+  padding: 10px 0 15px;
   margin: 0;
   border: none;
 }
@@ -55,37 +314,245 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form__extra {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .form__bio {
+    margin-bottom: 52px;
+  }
 
-    .form__list-item {
-      width: 50%;
+  .form__basic {
+    margin-bottom: 75px;
+  }
+
+  .form__set {
+    padding-top: 10px;
+    padding-bottom: 45px;
+  }
+
+  .form__set--extra {
+    padding-bottom: 14px;
+  }
+
+  .form__field {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+    input {
+      font-size: 20px;
+      line-height: 20px;
+      height: 52px;
+      padding: 15px 20px;
+
+      &:invalid {
+        padding: 14px 19px;
+      }
+
+      &:focus {
+        padding: 14px 19px;
+      }
+    }
+
+    &--name input {
+      margin-left: 17px;
+    }
+
+    &--weight input {
+      margin-left: 20px;
+    }
+
+    &--age input {
+      margin-left: 17px;
+    }
+
+    &--email::after {
+      top: 20px;
+      right: 21px;
+    }
+
+    &--phone::after {
+      top: 17px;
+      right: 17px;
+    }
+
+    &.form__field--email input {
+      margin-left: 17px;
+      padding-right: 50px;
+    }
+
+    &.form__field--phone input {
+      margin-left: 14px;
+      padding-right: 50px;
     }
   }
 
-  .form__notice,
+  .form__radio {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 9px;
+    padding-bottom: 13px;
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .form__title {
+    font-size: 36px;
+    line-height: 36px;
+    max-width: none;
+    margin-left: -40px;
+    margin-bottom: 66px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &::before {
+      min-width: $tablet-width;
+      margin-top: 22px;
+    }
+  }
+
+  .form__comment {
+    font-size: 20px;
+    line-height: 30px;
+    height: 174px;
+    padding: 10px 17px;
+    margin-bottom: 20px;
+
+    &:focus {
+      padding: 9px 16px;
+    }
+  }
+
+  .form__check {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 9px;
+    padding-bottom: 13px;
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .form__list--extra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -20px;
+
+    .form__list-item {
+      width: 287px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .form__list-item {
+    input[type="radio"]:checked + .form__radio::after {
+      width: 18px;
+      height: 18px;
+      left: 11px;
+      top: 11px;
+    }
+
+    input[type="checkbox"]:checked + .form__check::after {
+      top: 12px;
+      left: 10px;
+    }
+  }
+
   .form__submit {
-    width: 45%;
+    font-size: 20px;
+    line-height: 20px;
+    width: 283px;
+    min-height: 52px;
+  }
+
+  .form__notice {
+    font-size: 16px;
+    width: 283px;
+    margin-left: 5px;
+  }
+
+  .form__list.form__list--program {
+    border: 1px solid rgba(205, 205, 205, 0.5);
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 24px;
+    padding-bottom: 11px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .form__extra {
+  .form__list--extra {
     .form__list-item {
-      width: 25%;
+      width: 20%;
     }
   }
 
   .form__basic {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 49px;
+  }
+
+  .form__bio {
+    margin-bottom: 0;
+  }
+
+  .form__list--program {
+    width: 514px;
   }
 
   .form__field,
-  .form__type,
   .form__bio {
     width: 570px;
+  }
+
+  .form__submit {
+    width: 570px;
+    margin-right: 76px;
+  }
+
+  .form__notice {
+    text-align: left;
+    width: 570px;
+    margin-left: 0;
+  }
+
+  .form__field.form__field--email {
+    margin-right: 75px;
+
+    input {
+      margin-left: 21px;
+    }
+  }
+
+  .form__set {
+    padding-bottom: 47px;
+
+    &--extra {
+      padding-bottom: 23px;
+    }
+  }
+
+  .form__comment {
+    padding: 10px 19px;
+
+    &:focus {
+      padding: 9px 18px;
+    }
+  }
+
+  .form__title::before {
+    min-width: $desktop-width;
   }
 }

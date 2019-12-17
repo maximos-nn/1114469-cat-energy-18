@@ -1,8 +1,50 @@
 .program-form__title {
   @include font($size: 36px, $height: 60px);
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 .program-form__intro {
   @include font($size: 14px, $height: 18px);
   text-transform: uppercase;
+  padding-right: 10px;
+  margin-bottom: 39px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-form__title {
+    font-size: 60px;
+    margin-top: 12px;
+    margin-bottom: 55px;
+  }
+
+  .program-form__intro {
+    font-size: 20px;
+    line-height: 30px;
+    width: 330px;
+    margin-left: 40px;
+    margin-bottom: 66px;
+  }
+
+  .program-form__form {
+    width: 630px;
+    margin-left: 41px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-form__form {
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 70px;
+  }
+
+  .program-form__title {
+    margin-top: 51px;
+  }
+
+  .program-form__intro {
+    margin-left: 0;
+  }
 }

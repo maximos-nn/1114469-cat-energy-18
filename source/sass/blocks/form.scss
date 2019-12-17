@@ -407,6 +407,7 @@
     padding-right: 40px;
 
     &::before {
+      min-width: $tablet-width;
       margin-top: 22px;
     }
   }
@@ -545,5 +546,9 @@
 
   .form__comment {
     padding: 10px 19px;
+  }
+
+  .form__title::before {
+    min-width: $desktop-width;
   }
 }

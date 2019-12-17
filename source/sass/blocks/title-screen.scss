@@ -113,13 +113,14 @@
 
     &::before {
       display: block;
-      min-width: 720px;
+      min-width: 650px;
       width: auto;
       height: 696px;
       top: -137px;
-      left: 50%;
+      left: 50vw;
       right: 0;
       background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: 0 0;
     }
   }
 
@@ -150,5 +151,11 @@
     position: static;
     margin-top: 53px;
     margin-left: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title-screen::before {
+    background-position: center;
   }
 }

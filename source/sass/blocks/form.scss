@@ -546,6 +546,10 @@
 
   .form__comment {
     padding: 10px 19px;
+
+    &:focus {
+      padding: 9px 18px;
+    }
   }
 
   .form__title::before {

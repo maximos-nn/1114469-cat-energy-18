@@ -77,6 +77,7 @@
     color: #111111;
     text-align: left;
     padding: 0 88px;
+    margin: 5px 0;
   }
 
   .title-screen__slogan {
@@ -101,21 +102,21 @@
     min-height: 27px;
     position: absolute;
     left: 119px;
-    top: 256px;
+    top: 241px;
     padding-top: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .title-screen {
-    min-height: 654px;
+    min-height: 639px;
 
     &::before {
       display: block;
       min-width: 720px;
       width: auto;
       height: 696px;
-      top: -122px;
+      top: -137px;
       left: 50%;
       right: 0;
       background-image: url("../img/index-background-desktop@1x.jpg");
@@ -123,7 +124,7 @@
   }
 
   .title-screen__wrapper {
-    min-height: 647px;
+    min-height: 632px;
   }
 
   .title-screen__title,
@@ -134,7 +135,7 @@
   }
 
   .title-screen__title {
-    margin-top: 93px;
+    margin-top: 78px;
   }
 
   .title-screen__image {

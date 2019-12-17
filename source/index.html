@@ -85,17 +85,20 @@
                 </tr>
               </tbody>
             </table>
-            <p class="cat-story__spent">Затраты на питание: 15 000 руб.</p>
+            <p class="cat-story__spent">Затраты на питание: <span>15 000 руб.</span></p>
           </div>
         </div>
         <div class="cat-story__look">
           <ul class="cat-story__album">
-            <li class="cat-story__photo cat-story__photo--before cat-story__photo--active"><img src="img/before-mobile@1x.png" alt="Фото в начале" width="311" height="232"></li>
-            <li class="cat-story__photo cat-story__photo--after"><img src="img/after-mobile@1x.png" alt="Фото в конце" width="311" height="232"></li>
+            <li class="cat-story__photo cat-story__photo--before cat-story__photo--active"><img src="img/before-mobile@1x.png" alt="Фото в начале" width="320" height="240"></li>
+            <li class="cat-story__photo cat-story__photo--after"><img src="img/after-mobile@1x.png" alt="Фото в конце" width="320" height="240"></li>
           </ul>
           <div class="cat-story__controls">
-            <button class="cat-story__before">Было</button>
-            <button class="cat-story__after">Стало</button>
+            <button class="cat-story__before"><span>Было</span></button>
+            <span class="cat-story__control">
+              <input class="cat-story__range" type="range" name="range" min="0" max="100" value="50" step="1">
+            </span>
+            <button class="cat-story__after"><span>Стало</span></button>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@
 .title-screen__image {
   display: block;
   width: 280px;
-  height: 270px;
+  height: auto;
   margin-bottom: 4px;
 }
 
@@ -95,7 +95,6 @@
 
   .title-screen__image {
     width: 709px;
-    height: 609px;
     margin-bottom: 0;
   }
 
@@ -117,7 +116,6 @@
 
     &::before {
       display: block;
-      min-width: 650px;
       width: auto;
       height: 696px;
       top: -137px;
@@ -149,7 +147,6 @@
 
   .title-screen__image {
     width: 552px;
-    height: 499px;
     position: absolute;
     top: 5px;
     left: 490px;

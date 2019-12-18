@@ -51,6 +51,7 @@
   width: 50%;
 }
 
+.catalog__item-link,
 .catalog__item-image {
   display: block;
 }
@@ -187,6 +188,7 @@
 
   .catalog__item-image {
     width: 324px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
   }
@@ -229,7 +231,6 @@
       margin: 0 auto;
       background-image: url("../img/icon-plus.svg");
       background-repeat: no-repeat;
-      // opacity: 0.5;
     }
   }
 

@@ -42,6 +42,11 @@
     width: 173px;
     height: 58px;
   }
+
+  .page-header__logo-image {
+    width: 173px;
+    height: auto;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -53,5 +58,9 @@
   .page-header__logo {
     width: 202px;
     height: 59px;
+  }
+
+  .page-header__logo-image {
+    width: 202px;
   }
 }

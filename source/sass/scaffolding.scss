@@ -10,6 +10,7 @@
 }
 
 body {
+  min-width: 280px;
   margin: 0;
 
   font-family: $base-font-stack;
@@ -28,20 +29,4 @@ img {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.min-width {
-  min-width: 320px;
-}
-
-@media (min-width: $tablet-width) {
-  .min-width {
-    min-width: $tablet-width;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .min-width {
-    min-width: $desktop-width;
-  }
 }

@@ -12,7 +12,6 @@
 
   &::before {
     content: "";
-    min-width: 320px;
     position: absolute;
     left: 0;
     right: 0;
@@ -22,7 +21,6 @@
 
   &::after {
     content: "";
-    min-width: 320px;
     position: absolute;
     left: 0;
     right: 0;
@@ -220,7 +218,6 @@
 
   &::before {
     content: "";
-    min-width: 320px;
     position: absolute;
     left: 0;
     right: 0;
@@ -407,7 +404,6 @@
     padding-right: 40px;
 
     &::before {
-      min-width: $tablet-width;
       margin-top: 22px;
     }
   }
@@ -550,9 +546,5 @@
     &:focus {
       padding: 9px 18px;
     }
-  }
-
-  .form__title::before {
-    min-width: $desktop-width;
   }
 }

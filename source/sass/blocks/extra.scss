@@ -49,12 +49,7 @@
   margin-bottom: 15px;
 }
 
-// .extra__quantity {
-//   line-height: 14px;
-// }
-
 .extra__price {
-  // line-height: 14px;
   text-align: right;
 }
 
@@ -66,6 +61,14 @@
   padding: 10px;
   margin-bottom: 17px;
   background-color: #68b738;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .extra__gift {
@@ -162,7 +165,6 @@
   .extra__gift {
     text-align: left;
     position: relative;
-    // min-height: 108px;
     padding-top: 72px;
     padding-bottom: 68px;
     padding-left: 423px;

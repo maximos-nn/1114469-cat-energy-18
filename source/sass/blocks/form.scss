@@ -44,6 +44,7 @@
     box-sizing: border-box;
     height: 45px;
     width: 100%;
+    min-width: 0; // fixes input width in Firefox
     padding: 10px 15px;
     border: 1px solid rgba(205, 205, 205, 0.5);
     outline: none;

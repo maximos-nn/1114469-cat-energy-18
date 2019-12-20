@@ -121,19 +121,33 @@
         <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Логотип магазина" width="128" height="24">
       </a>
       <ul class="page-footer__social social">
-        <li class="social__item"><a class="social__link social__link--vkontakte" href="#" aria-label="ВКонтакте"></a></li>
-        <li class="social__item"><a class="social__link social__link--instagram" href="#" aria-label="Инстаграмм"></a></li>
-        <li class="social__item"><a class="social__link social__link--facebook" href="#" aria-label="Фуйсбук"></a></li>
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="#" aria-label="ВКонтакте">
+            <svg width="22" height="12"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#" aria-label="Инстаграмм">
+            <svg width="16" height="19"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#" aria-label="Фуйсбук">
+            <svg width="10" height="19"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+          </a>
+        </li>
       </ul>
       <p class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
           <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип Академии" width="27" height="34">
+          <svg class="copyright__image" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
         </a>
       </p>
     </div>
   </footer>
 
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
   <script src="js/script.js"></script>
 </body>
 

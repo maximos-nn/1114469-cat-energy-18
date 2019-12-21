@@ -14,6 +14,7 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var uglify = require("gulp-uglify");
+var htmlmin = require("gulp-htmlmin");
 
 var spriteGlob = [
   "source/img/htmlacademy.svg",
@@ -53,7 +54,9 @@ gulp.task("copy", function () {
 });
 
 gulp.task("html", function () {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("images", function () {

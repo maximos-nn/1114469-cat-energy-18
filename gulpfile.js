@@ -83,6 +83,7 @@ gulp.task("sprite", function () {
 gulp.task("minifyjs", function () {
   return gulp.src(["source/js/**/*.js", "!source/js/**/*.min.js"])
     .pipe(uglify())
+    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"));
 });
 

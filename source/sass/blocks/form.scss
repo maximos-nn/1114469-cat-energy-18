@@ -90,34 +90,35 @@
     padding-right: 40px;
   }
 
-  &--email {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 17px;
-      height: 13px;
-      background-image: url("../img/icon-mail.svg");
-      background-repeat: no-repeat;
-    }
-  }
-
+  &--email,
   &--phone {
     position: relative;
 
-    &::after {
-      content: "";
+    svg {
       position: absolute;
-      top: 13px;
-      right: 13px;
-      width: 20px;
-      height: 20px;
-      background-image: url("../img/icon-phone.svg");
-      background-repeat: no-repeat;
     }
+
+    input:invalid + svg {
+      fill: #ff8181;
+    }
+
+    input:focus + svg {
+      fill: #67b737;
+    }
+  }
+
+  &--email svg {
+    top: 16px;
+    right: 16px;
+    width: 17px;
+    height: 13px;
+  }
+
+  &--phone svg {
+    top: 13px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -361,12 +362,12 @@
       margin-left: 17px;
     }
 
-    &--email::after {
+    &--email svg {
       top: 20px;
       right: 21px;
     }
 
-    &--phone::after {
+    &--phone svg {
       top: 17px;
       right: 17px;
     }

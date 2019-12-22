@@ -18,11 +18,11 @@
     border-bottom: 1px solid #e6e6e6;
   }
 
-  a:hover {
+  a[href]:hover {
     opacity: 0.6;
   }
 
-  a:active {
+  a[href]:active {
     opacity: 0.3;
   }
 }

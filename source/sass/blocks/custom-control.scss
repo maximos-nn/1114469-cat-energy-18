@@ -78,7 +78,7 @@
   border-color: #bababa;
 }
 
-.custom-control__input:disabled ~ .custom-control__label:before {
+.custom-control__input:disabled ~ .custom-control__label::before {
   background-color: $alternative-background;
   border-color: #cdcdcd;
 }
@@ -93,7 +93,7 @@
   pointer-events: none; // IE bug: parent label:active doesn't work
 }
 
-@media (min-width: $tablet-width)  {
+@media (min-width: $tablet-width) {
   .custom-control__label {
     font-size: 20px;
     line-height: 20px;

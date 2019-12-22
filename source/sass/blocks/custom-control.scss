@@ -1,0 +1,125 @@
+.custom-control {
+  &__label {
+    @include font($height: 18px, $color: #222222);
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 46px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-sizing: border-box;
+      border: 1px solid #cdcdcd;
+      background-color: #ffffff;
+    }
+  }
+
+  &__input[type="radio"] ~ &__label::before {
+    border-radius: 50%;
+  }
+
+  &__input[type="radio"]:checked ~ &__label::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    border-radius: 50%;
+    background-color: #68b738;
+  }
+
+  &__input[type="checkbox"]:checked ~ &__label::after {
+    content: "";
+    width: 21px;
+    height: 16px;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__input:focus ~ &__label::before {
+    border: 2px solid #444444;
+  }
+
+  /*
+    При задании прозрачности тэгу label, IE не меняет её у псевдоэлементов.
+    Если задать её дополнительно и псевдоэлементам, то в других браузерах
+    происходит двойное применение свойства opacity. Поэтому использую
+    дополнительный span. Кроме того, селектор :active не работает в IE,
+    если у интерактивного элемента есть вложенные тэги. Для решения этой проблемы
+    задаю "pointer-events: none;" для спана.
+    Edge не стилизует label при клике мышью. При переключении состояния
+    с клавиатуры всё работает корректно. Для решения вопроса использую
+    label:active. Но необходимо принудительно разнести состояния label:active
+    и label:not(:active), иначе возможна ситуация двойного применения свойства
+    opacity в других браузерах.
+    Также существует баг в хромах с "залипанием" радио-кнопки, активированной
+    с клавиатуры (https://bugs.chromium.org/p/chromium/issues/detail?id=973001).
+  */
+  &__input:active:enabled ~ &__label:not(:active) .custom-control__text,
+  &__input:active:enabled ~ &__label:not(:active)::before,
+  &__input:active:enabled ~ &__label:not(:active)::after,
+  &__input:active:enabled ~ &__label:active .custom-control__text,
+  &__input:active:enabled ~ &__label:active::before,
+  &__input:active:enabled ~ &__label:active::after {
+    opacity: 0.3;
+  }
+
+  &__label:hover::before {
+    border-color: #bababa;
+  }
+
+  &__input:disabled ~ &__label:before {
+    background-color: $alternative-background;
+    border-color: #cdcdcd;
+  }
+
+  &__input:disabled ~ &__label .custom-control__text,
+  &__input:disabled ~ &__label::after {
+    opacity: 0.3;
+  }
+
+  &__text {
+    display: block;
+    pointer-events: none; // IE bug: parent label:active doesn't work
+  }
+}
+
+@media (min-width: $tablet-width)  {
+  .custom-control {
+    &__label {
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 9px;
+      padding-bottom: 13px;
+      padding-left: 60px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__input[type="radio"]:checked ~ &__label::after {
+      width: 18px;
+      height: 18px;
+      left: 11px;
+      top: 11px;
+    }
+
+    &__input[type="checkbox"]:checked ~ &__label::after {
+      top: 12px;
+      left: 10px;
+    }
+  }
+}

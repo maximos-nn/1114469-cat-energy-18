@@ -25,7 +25,6 @@
   padding-top: 7px;
   padding-bottom: 22px;
   position: relative;
-  overflow: hidden;
 }
 
 .title-screen__title {
@@ -44,7 +43,7 @@
 .title-screen__image {
   display: block;
   width: 280px;
-  height: auto;
+  height: 271px;
   margin-bottom: 3px;
 }
 
@@ -95,6 +94,7 @@
 
   .title-screen__image {
     width: 709px;
+    height: 609px;
     margin-bottom: 0;
   }
 
@@ -147,6 +147,7 @@
 
   .title-screen__image {
     width: 552px;
+    height: 499px;
     position: absolute;
     top: 5px;
     left: 490px;

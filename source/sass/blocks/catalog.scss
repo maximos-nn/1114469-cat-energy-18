@@ -192,7 +192,7 @@
     justify-content: flex-end;
     width: 100%;
     min-height: 208px;
-    height: 0px; // IE bug
+    height: 0; // IE bug
   }
 
   .catalog__item-info {

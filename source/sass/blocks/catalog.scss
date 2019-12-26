@@ -269,7 +269,7 @@
   .catalog__item {
     width: 245px;
     padding-top: 62px;
-    margin-right: 80px;
+    margin-right: calc(33.3333% - 980px / 3);
   }
 
   .catalog__item:nth-child(4n) {

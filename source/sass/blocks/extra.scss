@@ -125,9 +125,6 @@
   }
 
   .extra__item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 24px 37px;
     padding-right: 36px;
     border: 1px solid rgba(205, 205, 205, 0.5);
@@ -137,6 +134,11 @@
 
   .extra__item:last-child {
     border-bottom-color: rgba(205, 205, 205, 0.5);
+  }
+
+  .extra__description {
+    display: flex;
+    justify-content: space-between;
   }
 
   .extra__title {
@@ -163,7 +165,6 @@
   }
 
   .extra__order {
-    width: 100%;
     margin-bottom: 3px;
   }
 
@@ -211,8 +212,7 @@
   }
 
   .extra__item {
-    align-items: center;
-    justify-content: flex-start;
+    display: flex;
     padding: 15px 0;
     border: none;
     border-bottom: 1px solid #cdcdcd;
@@ -222,9 +222,14 @@
     border-bottom-color: #cdcdcd;
   }
 
+  .extra__description {
+    align-items: center;
+    flex-grow: 1;
+  }
+
   .extra__title {
-    min-width: 315px;
     margin: 0;
+    margin-right: auto;
   }
 
   .extra__info {
@@ -243,6 +248,7 @@
   }
 
   .extra__order {
+    flex-shrink: 0;
     width: 225px;
     margin-bottom: 1px;
   }

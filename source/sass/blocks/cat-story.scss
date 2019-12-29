@@ -102,7 +102,6 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
-    outline: none;
 
     &:hover {
       border-bottom: 1px solid rgba(17, 17, 17, 0.4);
@@ -140,10 +139,6 @@
     background-color: #68b738;
     border-radius: 3px;
   }
-}
-
-.cat-story__range {
-  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -333,11 +328,15 @@
     border: none;
 
     &::before {
+      height: auto;
       right: calc(50% - 326px);
+      top: 190px;
     }
 
     &::after {
+      height: auto;
       left: calc(50% + 326px);
+      top: 190px;
     }
   }
 
